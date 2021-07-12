@@ -1,23 +1,25 @@
 import TaskButtons from "./component/task-buttons";
+import React, { useState } from "react";
 
 function App() {
-  const [tasks, setTasks] = [
-    { 
-      id: 1, 
-     description: "Tomar café da manhã", 
-     done: false
+  const [tasks, setTasks] = useState ([
+     { 
+       id: 1, 
+       description: "Tomar café da manhã", 
+       done: false
+      },
+     {
+       id: 2,
+       description: "Ler e-mails",
+       done: false
      },
-    {
-      id: 2,
-      description: "Ler e-mails",
-      done: false
-    },
-    {
-      id: 3,
-      description: "Estudar React",
-      done: false
-    }
-  ];
+     {
+       id: 3,
+       description: "Estudar React",
+       done: false
+     },
+    ],
+  );
 
   const removeTask = index => () => {
     let newTasks = [...tasks];
